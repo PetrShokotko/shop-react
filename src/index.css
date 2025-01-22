@@ -20,31 +20,69 @@ body {
 }
 
 .header {
+    position: relative;
     align-items: center;
     display: flex;
+    justify-content: space-between;
 }
 header .logo {
     font-weight: 600;
     font-size: 20px;
 }
 
-.nav {
+header .shop-cart-button {
     margin-left: auto;
+    padding:0 25px;
+    cursor: pointer;
+    transition: transform 500ms ease, opacity 500ms ease;
+}
+header .shop-cart-button:hover {
+    opacity: 0.5;
+    transform: scale(1.5);}
+
+header .shop-cart-button.active {
+        color: rgba(206, 65, 65, 0.775);
+    }
+header .shop-cart {
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 450px;
+    min-height: 100px;
+    background-color: #fafafa;
+    box-shadow: 9px 9px 15px -6px rgba(0,0,0,0.5);
+    z-index: 1000;
+
+}
+
+
+
+.nav {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    padding: 0;
+    /* margin-left: auto; */
     list-style: none;
 }
 
 
 header ul.nav li {
-    display: inline;
-    margin-left: 25px;
+    display: inline-flex;
     cursor: pointer;
-    transition: opacity 500ms ease;
-
+    transition: opacity 500ms ease, transform 500ms ease; /* Добавлено свойство transform */
 }
 
 .nav li:hover {
     opacity: 0.5;
+    transform: translateY(-2px); /* Поднимаем элемент на 5 пикселей */
 }
+
+/* .nav li.active {
+    color: rgba(194, 77, 77, 0.687);
+} */
+
+
 
 
 header .presentation {
@@ -97,6 +135,7 @@ main .item {
     background: #f5f5f5;
     overflow: hidden;
     border-radius: 10px 10px 0 0;
+    box-shadow: 5px 6px 15px -6px rgba(0,0,0,0.5);
 }
 
 main .item img {width: 100%;
@@ -133,6 +172,7 @@ main .add-to-cart {position: absolute;
     cursor: pointer;
     font-weight: 600;
     transition: transform 500ms ease;
+    box-shadow: 5px 6px 15px -6px rgba(0,0,0,0.5);
 
 }
 
