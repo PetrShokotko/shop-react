@@ -5,7 +5,7 @@ const Items = (props) => {
     return (
         <main className="com1">
             {props.items.map(el => (
-                <Item key={el.id} item={el} />
+                <Item key={el.id} item={el} onAdd={props.onAdd} />
             ))}
         </main>
     );
@@ -21,6 +21,7 @@ Items.propTypes = {
             price: PropTypes.number.isRequired,
         })
     ).isRequired,
+    onAdd: PropTypes.func.isRequired,
 };
 
 export default Items;

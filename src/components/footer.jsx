@@ -1,5 +1,5 @@
 // src/components/Footer.jsx
-import React from 'react';
+import 'react';
 
 const Footer = () => {
     return <footer>Все права защищены &copy; </footer>;

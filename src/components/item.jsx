@@ -1,5 +1,5 @@
 
-import  { Component } from 'react';
+import { Component } from 'react';
 import PropTypes from 'prop-types';
 
 export class Item extends Component {
@@ -10,6 +10,7 @@ export class Item extends Component {
       desc: PropTypes.string.isRequired,
       price: PropTypes.number.isRequired,
     }).isRequired,
+    onAdd: PropTypes.func.isRequired, // Добавьте эту строку
   };
 
   render() {
@@ -19,7 +20,7 @@ export class Item extends Component {
         <h2>{this.props.item.title}</h2>
         <p>{this.props.item.desc}</p>
         <p className='price'>{this.props.item.price}$</p>
-        <div className='add-to-cart'>+</div>
+        <div className='add-to-cart' onClick={() => this.props.onAdd(this.props.item)}>+</div>
       </div>
     );
   }

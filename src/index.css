@@ -48,12 +48,59 @@ header .shop-cart {
     top: 30px;
     right: 0;
     width: 450px;
-    min-height: 100px;
-    background-color: #fafafa;
+    background-color: #EEEEED;
     box-shadow: 9px 9px 15px -6px rgba(0,0,0,0.5);
     z-index: 1000;
+    padding: 20px;
 
 }
+header .shop-cart .shop-cart-title {
+    text-align: center;
+    font-weight: normal;
+    font-size: 16px;
+    margin: 0 0 15px 0;
+    width: 100%;
+    color: #747373ec;
+    border-bottom: 2px solid rgba(115, 115, 115, 0.447);
+    padding-bottom: 5px;
+}
+
+header .shop-cart .shop-cart-empty {
+    text-align: center;
+    font-weight: normal;
+    font-size: 14px;
+    margin: 0 0 15px 0;
+    width: 100%;
+    color: #747373ec;
+    /* border-bottom: 2px solid rgba(115, 115, 115, 0.447);
+    padding-bottom: 5px; */
+}
+
+
+header .shop-cart .item {
+    /* display: flex;
+    justify-content: space-between;
+    align-items: center; */
+    height: 60px;
+    margin: 5px;
+    width: 100%;
+    background-color: rgba(115, 115, 115, 0.111);
+}
+header .shop-cart .item img {
+    width: 80px;
+    float: left;
+    margin-right: 20px;
+    height: 60px;
+}
+header .shop-cart .item h2 {
+    font-size: 20px;
+
+    /* margin-bottom: 10px; */
+
+}
+header .shop-cart .item p 
+{color: rgba(12, 151, 105, 0.772);}
+
 
 
 
