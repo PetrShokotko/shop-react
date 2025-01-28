@@ -52,6 +52,7 @@ header .shop-cart {
     box-shadow: 9px 9px 15px -6px rgba(0,0,0,0.5);
     z-index: 1000;
     padding: 20px;
+    border-radius: 8px;
 
 }
 header .shop-cart .shop-cart-title {
@@ -78,19 +79,25 @@ header .shop-cart .shop-cart-empty {
 
 
 header .shop-cart .item {
-    /* display: flex;
-    justify-content: space-between;
-    align-items: center; */
-    height: 60px;
-    margin: 5px;
-    width: 100%;
-    background-color: rgba(115, 115, 115, 0.111);
-}
+    display: flex; /* Используем флексбокс для компоновки */
+            justify-content: space-between; /* Пространство между элементами */
+            align-items: center; /* Вертикальное центрирование */
+            height: 100px; /* Высота элемента */
+            margin: 10px 0; /* Отступ между элементами */
+            padding: 10px; /* Внутренний отступ */
+            background-color: rgba(115, 115, 115, 0.1); /* Цвет фона элемента */
+            border-radius: 8px; /* Закругленные углы */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Слабая тень */
+            transition: background-color 0.3s; /* Плавный переход цвета фона */
+        }
+
 header .shop-cart .item img {
-    width: 80px;
+    width: 100px;
     float: left;
     margin-right: 20px;
-    height: 60px;
+    height: 80px;
+    border-radius: 4px;
+    border: 2px solid #ddd;
 }
 header .shop-cart .item h2 {
     font-size: 20px;
@@ -100,6 +107,21 @@ header .shop-cart .item h2 {
 }
 header .shop-cart .item p 
 {color: rgba(12, 151, 105, 0.772);}
+
+header .shop-cart .item .delete-icon {
+    cursor: pointer;
+    color: rgba(251, 120, 120, 0.865);
+    transition: color, transform 500ms ease;
+
+
+}
+header .shop-cart .item .delete-icon:hover {
+    color: rgba(252, 22, 22, 0.777);
+    transform: scale(1.5);
+}
+
+header .shop-cart .summa {
+float: right;}
 
 
 
