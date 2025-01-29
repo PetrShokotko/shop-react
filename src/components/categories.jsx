@@ -1,4 +1,5 @@
-import { Component } from 'react';
+import  { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class Categories extends Component {
     constructor(props) {
@@ -26,5 +27,10 @@ export class Categories extends Component {
         );
     }
 }
+
+// Добавление валидации для props
+Categories.propTypes = {
+    chooseCategory: PropTypes.func.isRequired, // Указываем, что chooseCategory должен быть функцией
+};
 
 export default Categories;
